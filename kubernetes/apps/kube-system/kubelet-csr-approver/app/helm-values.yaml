@@ -1,0 +1,3 @@
+---
+providerRegex: ^(controlplane0|controlplane1|controlplane2)$
+bypassDnsResolution: true

@@ -38,6 +38,40 @@ nodes:
         mtu: 1500
         vip:
           ip: "192.168.1.80"
+  - hostname: "controlplane1"
+    ipAddress: "192.168.1.82"
+    installDisk: "/dev/nvme0n1"
+    talosImageURL: factory.talos.dev/installer/c9078f9419961640c712a8bf2bb9174933dfcf1da383fd8ea2b7dc21493f8bac
+    controlPlane: true
+    networkInterfaces:
+      - deviceSelector:
+          hardwareAddr: "6c:4b:90:41:74:72"
+        dhcp: false
+        addresses:
+          - "192.168.1.82/24"
+        routes:
+          - network: 0.0.0.0/0
+            gateway: "192.168.1.1"
+        mtu: 1500
+        vip:
+          ip: "192.168.1.80"
+  - hostname: "controlplane2"
+    ipAddress: "192.168.1.83"
+    installDisk: "/dev/nvme0n1"
+    talosImageURL: factory.talos.dev/installer/c9078f9419961640c712a8bf2bb9174933dfcf1da383fd8ea2b7dc21493f8bac
+    controlPlane: true
+    networkInterfaces:
+      - deviceSelector:
+          hardwareAddr: "6c:4b:90:83:b7:60"
+        dhcp: false
+        addresses:
+          - "192.168.1.83/24"
+        routes:
+          - network: 0.0.0.0/0
+            gateway: "192.168.1.1"
+        mtu: 1500
+        vip:
+          ip: "192.168.1.80"
 
 # Global patches
 patches:

@@ -32,3 +32,22 @@ spec:
           external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
         hosts:
           - "grafana.${SECRET_DOMAIN}"
+      persistence:
+        enabled: true
+        type: sts
+        storageClassName: openebs-hostpath
+        accessModes: ["ReadWriteOnce"]
+        size: 20Gi
+        finalizers:
+          - kubernetes.io/pvb-protection
+    prometheus:
+      prometheusSpec:
+        replicas: 2
+        storageSpec:
+          volumeClaimTemplate:
+            spec:
+              storageClassName: openebs-hostpath
+              accessModes: ["ReadWriteOnce"]
+              resources:
+                requests:
+                  storage: 20Gi

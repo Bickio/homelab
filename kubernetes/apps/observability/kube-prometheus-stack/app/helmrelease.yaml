@@ -51,3 +51,11 @@ spec:
               resources:
                 requests:
                   storage: 20Gi
+    kubeControllerManager:
+      service:
+        selector:
+          k8s-app: kube-controller-manager
+    kubeScheduler:
+      service:
+        selector:
+          k8s-app: kube-scheduler

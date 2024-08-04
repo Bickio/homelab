@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: matrix-synapse
-      version: 4.1.0
+      version: 3.9.9
       sourceRef:
         kind: HelmRepository
         name: anance-charts

@@ -39,6 +39,4 @@ spec:
       persistence:
         storageClass: "openebs-hostpath"
     ingress:
-      hosts:
-        - matrix.bickio.com
       className: external

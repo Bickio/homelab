@@ -25,6 +25,8 @@ spec:
     publicServerName: matrix.bickio.com
     wellknown:
       enabled: true
+    persistence:
+      storageClass: "openebs-hostpath"
     postgresql:
       auth:
         password: "$(SYNAPSE_POSTGRES_PASSWORD)"

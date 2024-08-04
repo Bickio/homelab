@@ -21,8 +21,8 @@ spec:
     remediation:
       retries: 3
   values:
-    serverName: bickio.com
-    publicServerName: matrix.bickio.com
+    serverName: "${SECRET_DOMAIN}"
+    publicServerName: "matrix.${SECRET_DOMAIN}"
     wellknown:
       enabled: true
     persistence:
@@ -40,3 +40,5 @@ spec:
         storageClass: "openebs-hostpath"
     ingress:
       className: external
+      annotations:
+        external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"

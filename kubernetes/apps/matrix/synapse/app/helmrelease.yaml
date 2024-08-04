@@ -25,6 +25,9 @@ spec:
     publicServerName: matrix.bickio.com
     wellknown:
       enabled: true
+    workers:
+      default:
+        replicaCount: 2
     persistence:
       storageClass: "openebs-hostpath"
     postgresql:

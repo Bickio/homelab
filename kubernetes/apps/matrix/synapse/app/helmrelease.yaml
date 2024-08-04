@@ -23,6 +23,17 @@ spec:
   values:
     serverName: "${SECRET_DOMAIN}"
     publicServerName: "matrix.${SECRET_DOMAIN}"
+    synapse:
+      prometheus.io/scrape: "true"
+      prometheus.io/path: /_synapse/metrics
+      prometheus.io/port: 9090
+    workers:
+      default:
+        replicaCount: 2
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /_synapse/metrics
+        prometheus.io/port: 9090
     wellknown:
       enabled: true
     persistence:

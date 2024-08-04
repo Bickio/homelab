@@ -27,13 +27,13 @@ spec:
       enabled: true
     postgresql:
       auth:
-        existingSecret: synapse-secret
+        password: "$(SYNAPSE_POSTGRES_PASSWORD)"
       primary:
         persistence:
           storageClass: "openebs-hostpath"
     redis:
       auth:
-        existingSecret: synapse-secret
+        password: "$(SYNAPSE_REDIS_PASSWORD)"
       persistence:
         storageClass: "openebs-hostpath"
     ingress:

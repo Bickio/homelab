@@ -8,6 +8,7 @@ resources:
   - ./coredns.yaml
   - ./jetstack.yaml
   - ./metrics-server.yaml
+  - ./nextcloud.yaml
   - ./openebs.yaml
   - ./postfinance.yaml
   - ./prometheus-community.yaml

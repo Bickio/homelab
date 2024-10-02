@@ -29,3 +29,5 @@ spec:
       className: external
       hosts:
         - host: "homeassistant.${SECRET_DOMAIN}"
+      annotations:
+        external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"

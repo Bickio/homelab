@@ -28,4 +28,4 @@ spec:
       enabled: true
       className: external
       hosts:
-        - "homeassistant.${SECRET_DOMAIN}"
+        - host: "homeassistant.${SECRET_DOMAIN}"

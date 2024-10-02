@@ -37,4 +37,4 @@ spec:
     configuration:
       enabled: true
       trusted_proxies:
-        - 10.69.0.0/8
+        - 10.69.0.0/24

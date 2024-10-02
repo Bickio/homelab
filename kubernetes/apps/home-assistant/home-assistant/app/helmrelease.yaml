@@ -24,3 +24,8 @@ spec:
     persistence:
       enabled: true
       storageClass: "openebs-hostpath"
+    ingress:
+      enabled: true
+      className: external
+      hosts:
+        - "homeassistant.${SECRET_DOMAIN}"

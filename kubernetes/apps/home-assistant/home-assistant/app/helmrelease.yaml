@@ -34,3 +34,6 @@ spec:
               pathType: ImplementationSpecific
       annotations:
         external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
+      configuration:
+        trusted_proxies:
+          - 10.69.0.0/8

@@ -20,3 +20,8 @@ spec:
     cleanupOnFail: true
     remediation:
       retries: 3
+  values:
+    data:
+      storageClass: "openebs-hostpath"
+    configinc:
+      storageClass: "openebs-hostpath"

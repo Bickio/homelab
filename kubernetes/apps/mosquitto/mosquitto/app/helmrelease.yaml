@@ -27,6 +27,8 @@ spec:
         targetSelector:
           main: main
         ingressClassName: "internal"
+        hosts:
+          - host: "hubble.${SECRET_DOMAIN}"
     persistence:
       data:
         storageClass: "openebs-hostpath"

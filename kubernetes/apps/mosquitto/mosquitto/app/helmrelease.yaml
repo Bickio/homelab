@@ -29,6 +29,9 @@ spec:
         ingressClassName: "internal"
         hosts:
           - host: "hubble.${SECRET_DOMAIN}"
+        integrations:
+          traefik:
+            enabled: false
     persistence:
       data:
         storageClass: "openebs-hostpath"

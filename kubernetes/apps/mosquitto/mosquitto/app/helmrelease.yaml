@@ -28,7 +28,7 @@ spec:
           main: main
         ingressClassName: "internal"
         hosts:
-          - host: "hubble.${SECRET_DOMAIN}"
+          - host: "mosquitto.${SECRET_DOMAIN}"
         integrations:
           traefik:
             enabled: false

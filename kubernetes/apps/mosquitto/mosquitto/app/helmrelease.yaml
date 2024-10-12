@@ -21,17 +21,15 @@ spec:
     remediation:
       retries: 3
   values:
-    ingress:
+    service:
       main:
-        enabled: true
-        targetSelector:
-          main: main
-        ingressClassName: "internal"
-        hosts:
-          - host: "mosquitto.${SECRET_DOMAIN}"
-        integrations:
-          traefik:
-            enabled: false
+        type: LoadBalancer
+        annotations:
+          io.cilium/lb-ipam-ips: "192.168.1.96"
+        ports:
+          main:
+            port: 1883
+            targetPort: 1883
     persistence:
       data:
         storageClass: "openebs-hostpath"

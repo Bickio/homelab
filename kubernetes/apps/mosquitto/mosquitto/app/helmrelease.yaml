@@ -21,6 +21,12 @@ spec:
     remediation:
       retries: 3
   values:
+    ingress:
+      main:
+        enabled: true
+        targetSelector:
+          main: main
+        ingressClassName: "internal"
     persistence:
       data:
         storageClass: "openebs-hostpath"

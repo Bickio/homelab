@@ -8,7 +8,6 @@ resources:
   - ./coredns.yaml
   - ./jetstack.yaml
   - ./metrics-server.yaml
-  - ./mosquitto.yaml
   - ./nextcloud.yaml
   - ./openebs.yaml
   - ./postfinance.yaml
@@ -20,3 +19,4 @@ resources:
   - ./k8s-gateway.yaml
   - ./csi-driver-nfs.yaml
   - ./pajikos.yaml
+  - ./truecharts.yaml
